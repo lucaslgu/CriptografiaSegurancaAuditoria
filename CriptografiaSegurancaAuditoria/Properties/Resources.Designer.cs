@@ -133,6 +133,16 @@ namespace CriptografiaSegurancaAuditoria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap wallpaperForm {
+            get {
+                object obj = ResourceManager.GetObject("wallpaperForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap whatsappIcon {
             get {
                 object obj = ResourceManager.GetObject("whatsappIcon", resourceCulture);

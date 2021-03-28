@@ -41,7 +41,7 @@ namespace CriptografiaSegurancaAuditoria
 
         private void pictureBox_Link_Click(object sender, EventArgs e)
         {
-            Process.Start(chromeRoute, "https://www.linkedin.com/in/lucas-ribeiro-18599418b/");
+            Process.Start(chromeRoute, "https://www.linkedin.com/in/lucas-ribeiro-py");
         }
 
         private void pictureBox_Gmail_Click(object sender, EventArgs e)
