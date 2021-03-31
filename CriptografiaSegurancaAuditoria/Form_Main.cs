@@ -79,7 +79,7 @@ namespace CriptografiaSegurancaAuditoria
                 {
                     result = algoritmoCriptografia.Criptografia(txt_sendToBackend.Text);
 
-                    if (result.Length > txt_sendToBackend.Text.Length * 5 * 4 + 4)
+                    if (result.Length != txt_sendToBackend.Text.Length * 5 * 4 + 4)
                     {
                         result = algoritmoCriptografia.Criptografia(txt_sendToBackend.Text);
                     }

@@ -119,16 +119,6 @@ namespace CriptografiaSegurancaAuditoria.CriptografiaDescriptografia
             int min = 30;
             int max = 99;
 
-            //Vai ser add 4 caracteres, os caracteres responsaveis é os 4 primeiros números divisiveis do valor max da condição + 129
-            //Sendo dois dos caracteres antes do caracter criptografado e dois após a inserção do caracter criptografado
-            //Caso aconteceça de letras se repetirem, ele muda o padrão --- a letra criptografada passa a ficar como antipenultima e é add
-            //mais uma letra em formato hexadecimal add no final da condição, sendo a mesma, o mínimo da função + o max da função dividido por 2
-            //o zero do hex, vai ser substituido por um numero sequencial de ordem 0 a 2 repetindo esse ciclo
-            // Ex.: 64/2 = 32 --- 32/2 = 16 --- 16/2 = 8 --- 8/2 = 4
-            // + 129
-
-            //trocar esse retorno fixo de caracteres
-
             if (varianteTamanho == 0)
             {
                 retornoCaractere += "0" + "x" + randNum.Next(min, max).ToString("X");
@@ -176,10 +166,6 @@ namespace CriptografiaSegurancaAuditoria.CriptografiaDescriptografia
             return hexValue;
         }
 
-        //x = (y - 1) / 2 --- O resultado tem que ser até 64 e maior 32, caso seja maior,
-        //vai para próxima condição, sendo y o valor hexadecimal criptografado
-        //x = y/2 + 33 - O resultado tem que ser até 96 e maior que 64
-        //x = y/2 + 31 - O resultado tem que ser até 128 e maior que 96
         public decimal HexParaDec(string caractereHex, int qualCondicao)
         {
             caractereHex = caractereHex.Substring(2, 2);
